@@ -1,0 +1,86 @@
+:root{
+  --vp-c-brand: #44bd87;
+  --vp-c-brand-2: #249252;
+}
+
+.demo {
+  max-width: 1200px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.demo > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: stretch;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+
+.demo  h1{
+  margin: 1rem 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.demo .box{
+  flex-grow: 1;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid lightgrey;
+}
+
+.demo button {
+    padding: 3px 15px;
+    background-color: var(--vp-c-brand);
+    border: none;
+    outline: none;
+    color: #fff;
+    margin: .5rem 0;
+    border-bottom: 2px solid var(--vp-c-brand-2);
+    text-shadow: 1px 1px 1px var(--vp-c-brand-2);
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    vertical-align: middle
+}
+
+.demo button.small {
+    padding: .25em .7em .2em
+}
+
+.demo button.orange {
+    --vp-c-brand: #db8742;
+    --vp-c-brand-dark: #ad6e39;
+    --vp-c-brand-active: #d67e36
+}
+
+.demo button.red {
+    --vp-c-brand: #f56c6c;
+    --vp-c-brand-dark: #e41c1c;
+    --vp-c-brand-active: #e94c4c
+}
+
+.demo button:hover {
+    background-color: var(--vp-c-brand-2)
+}
+
+.demo button:active {
+    border-bottom: 0;
+    border-top: 2px solid var(--vp-c-brand-2)
+}
+
+.demo button~button {
+    margin-left: .5rem
+}
+
+.demo button[disabled],.demo button.disabled {
+    cursor: default;
+    background-color: rgba(125, 125, 125, .2);
+    color: var(--vp-c-disabled-fg);
+    border-bottom: 2px solid rgba(125, 125, 125, .2);
+    pointer-events: none;
+    text-shadow: none;
+    border-top: 0;
+    opacity: .8
+}
